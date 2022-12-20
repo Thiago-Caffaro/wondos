@@ -20,7 +20,6 @@
 }#barra-inferior>#apps{
     display: flex;
     flex-direction: row;
-    list-style: none;
     margin: auto;
 }.app{
     margin-left: 10px;

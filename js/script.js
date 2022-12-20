@@ -53,22 +53,32 @@ function fecharJanela(){
     document.getElementById('placeHolderJanela').innerHTML = janelaHtml
 }
 function abrirVideo(video){
-    const typeHtml = `
+    const videoHtml = `
         <div id="janela">
             <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
             <video width="100%" height="570px" autoplay><source src=${video} type="video/mp4"></video>
         </div>
     `
-    document.getElementById('placeHolderJanela').innerHTML = typeHtml
+    document.getElementById('placeHolderJanela').innerHTML = videoHtml
 }
 function abrirImagem(imagem){
-    const typeHtml = `
+    const imagemHtml = `
         <div id="janela">
             <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
             <img src=${imagem} style="width: 100%; height: 620px;">
         </div>
     `
-    document.getElementById('placeHolderJanela').innerHTML = typeHtml
+    document.getElementById('placeHolderJanela').innerHTML = imagemHtml
+}
+function abrirAudio(audio){
+    const audioHtml = `
+        <div id="janela">
+            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
+            <img src=${imagem} style="width: 100%; height: 620px;">
+            <audio src="${audio}" autoplay></audio>
+        </div>
+    `
+    document.getElementById('placeHolderJanela').innerHTML = audioHtml
 }
 function abrirDiretorio(type){
     if (type === 'areaTrabalho'){
