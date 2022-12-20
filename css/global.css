@@ -17,3 +17,6 @@ button{
     background-size: cover;
     background-position: center center;
 }
+li{
+    list-style: none;
+}
