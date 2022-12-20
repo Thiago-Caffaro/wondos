@@ -6,49 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/janela.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/barra-inferior.css">
     <title>Desktop</title>
 </head>
+
 <body>
     <script src="js/script.js"></script>
     <div id="desktop">
         <p style="display: none;">Olá <img src="images/unknown.png"></p>
         <ul id="apps">
             <button onclick="abrirPasta('arquivo'), abrirDiretorio('Lixeira')">
-                <li class="app"><img src="images/icons/icons8-empty-trash-48.png"></li>
+                <li class="app"><img src="images/icons/icons8-empty-trash-48.png"><p class="nameFolder">Lixeira</p></li>
             </button>
-            <button onclick="abrirImagem('images/cato.png')">
-                <li class="app"><img src="images/icons/icons8-image-file.svg"><br><p style="color: aliceblue;">Meu amor1</p></li>
+            <button onclick="abrirImagem('images/cato.png', 'novo')">
+                <li class="app"><img src="images/icons/icons8-image-file.svg"><br><p class="nameFolder">Meu amor1</p></li>
             </button>
             <button onclick="abrirVideo('images/pexe.mp4')">
-                <li class="app"><img src="images/icons/icons8-video-48.png"><br><p style="color: aliceblue;">Meu amor2</p></li>
+                <li class="app"><img src="images/icons/icons8-video-48.png"><br><p class="nameFolder">Meu amor2</p></li>
             </button>
             <button onclick="abrirVideo('images/miau.mp4')">
-                <li class="app"><img src="images/icons/icons8-video-48.png"><br><p style="color: aliceblue;">Meu amor3</p></li>
+                <li class="app"><img src="images/icons/icons8-video-48.png"><br><p class="nameFolder">Meu amor3</p></li>
             </button>
             <button onclick="abrirAudio('ult.mp3')">
-                <li class="app"><img src="images/icons/icons8-audio-100.png"><br><p style="color: aliceblue;">Corra</p></li>
+                <li class="app"><img src="images/icons/icons8-audio-100.png"><br><p class="nameFolder">Corra</p></li>
+            </button><br>
+            <button onclick="abrirPasta('arquivo'), user('felipe')">
+                <li class="app"><img src="images/icons/icons8-folder.svg"><p class="nameFolder">Felipe Oliveira</p></li>
             </button>
             
         </ul>
         <div id="placeHolderJanela"></div>
     </div>
     <div id="barra-inferior">
-        <div id="botao-logo">
+        <div id="botao-logo" onclick="abrirWondo()">
             <img src="images/icons/icons8-share.svg"><p>WONDOS</p>
         </div>
         <ul id="apps">
             <button onclick="abrirPasta('arquivo')">
-                <li class="app"><img src="images/icons/icons8-folder.svg" alt=""></li>
+                <li class="app"><img src="images/icons/icons8-folder.svg"></li>
             </button>
             <button onclick="abrirPasta('chat')">
-                <li class="app"><img src="images/icons/icons8-speech-bubble.svg" alt=""></li>
-            </button>
-            <button>
-                <li class="app"><img src="images/icons/icons8-folder.svg" alt=""></li>
-            </button>
-            <button>
-                <li class="app"><img src="images/icons/icons8-folder.svg" alt=""></li>
+                <li class="app"><img src="images/icons/icons8-speech-bubble.svg"></li>
             </button>
         </ul>
         <ul id="ferramentas">
