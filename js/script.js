@@ -113,10 +113,10 @@ function abrirDiretorio(type){
                 <td>Meu amor1.png</td>
             </tr>
             <tr onclick="abrirVideo('images/pexe.mp4')">
-                <td>Meu amor2.png</td>
+                <td>Meu amor2.mp4</td>
             </tr>
             <tr onclick="abrirVideo('images/miau.mp4')">
-                <td>Meu amor3.png</td>
+                <td>Meu amor3.mp4</td>
             </tr>
             <tr onclick="abrirAudio('ult.mp3')">
                 <td>Corra.mp3</td>
@@ -155,7 +155,7 @@ function abrirDiretorio(type){
         const dirHtml = `
             <table style="width:100%">
                 <tr>
-                    <td onclick="abrirImagem('images/cato.png')">Meu amor1.png</td>
+                    <td onclick="abrirImagem('images/cato.png', 'novo')">Meu amor1.png</td>
                 </tr>
             </table> 
         `
