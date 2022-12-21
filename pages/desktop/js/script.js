@@ -47,7 +47,7 @@ function fecharJanela(){
     const janelaHtml = ``
     document.getElementById('placeHolderJanela').innerHTML = janelaHtml
 }
-function abrirPrograma(programa, online){
+function abrirPrograma(programa){
     const janelaHtml = `
         <div id="janela">
             <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
@@ -60,7 +60,7 @@ function abrirPrograma(programa, online){
         `
         document.getElementById('janela').innerHTML = progHtml
     }
-    if (programa === 'chromo' ){
+    if (programa === 'chromo'){
             const progHtml = `
             <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
             <iframe src="programas/jump/index.html" style="height: 100%; width: 100%; border: 0;"></iframe>
