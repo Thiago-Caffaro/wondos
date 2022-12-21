@@ -66,11 +66,6 @@ function abrirPrograma(programa){
             <iframe src="programas/jump/index.html" style="height: 100%; width: 100%; border: 0;"></iframe>
         `
         document.getElementById('janela').innerHTML = progHtml
-    }else{
-        const progHtml = `
-            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
-        `
-        document.getElementById('janela').innerHTML = progHtml
     }
     if (programa === 'xess'){
         const progHtml = `
