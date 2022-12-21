@@ -46,4 +46,5 @@ td:hover{
     height: calc(100% - 30px);
     width: calc(100% - 170px);
     display: inline-block;
+    position:static;
 }

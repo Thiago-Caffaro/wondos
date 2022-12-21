@@ -25,9 +25,11 @@
     margin-left: 10px;
     margin-right: 10px;
     transition: transform .2s;
+    position:static;
+
 }#barra-inferior>#apps>button>.app:hover{
     transform: scale(1.2);
-    transform: translateY(-10px);
+    transform: translateY(-20px);
     cursor: pointer;
 }
 #barra-inferior>#ferramentas{

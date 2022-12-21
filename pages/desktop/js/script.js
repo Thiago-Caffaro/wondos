@@ -37,14 +37,6 @@ function abrirPasta(type) {
         `
         document.getElementById('janela').innerHTML = typeHtml
     }
-    if(type === 'chat'){
-        const typeHtml = `
-            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
-            <div id="lateral-arquivo">
-            </div>
-        `
-        document.getElementById('janela').innerHTML = typeHtml
-    }
     if(type === 'lixeira'){
         const typeHtml = `
             <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
@@ -54,6 +46,39 @@ function abrirPasta(type) {
 function fecharJanela(){
     const janelaHtml = ``
     document.getElementById('placeHolderJanela').innerHTML = janelaHtml
+}
+function abrirPrograma(programa, online){
+    const janelaHtml = `
+        <div id="janela">
+            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
+        </div>`
+    document.getElementById('placeHolderJanela').innerHTML = janelaHtml
+    if (programa === 'heardfy'){
+        const progHtml = `
+            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
+            <iframe src="programas/heardfy/index.html" style="height: 100%; width: 100%; border: 0;"></iframe>
+        `
+        document.getElementById('janela').innerHTML = progHtml
+    }
+    if (programa === 'chromo' ){
+            const progHtml = `
+            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
+            <iframe src="programas/jump/index.html" style="height: 100%; width: 100%; border: 0;"></iframe>
+        `
+        document.getElementById('janela').innerHTML = progHtml
+    }else{
+        const progHtml = `
+            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
+        `
+        document.getElementById('janela').innerHTML = progHtml
+    }
+    if (programa === 'xess'){
+        const progHtml = `
+            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
+            <iframe src="programas/xess/index.html" style="height: 100%; width: 100%; border: 0; margin: 0;"></iframe>
+        `
+        document.getElementById('janela').innerHTML = progHtml
+    }
 }
 function abrirVideo(video){
     const videoHtml = `
@@ -145,7 +170,7 @@ function abrirDiretorio(type){
                     <td onclick="abrirVideo('images/pexe.mp4')">Meu amor2.mp4</td>
                 </tr>
                 <tr>
-                    <td onclick="abrirVideo('images/cato.mp4')">Meu amor3.mp4</td>
+                    <td onclick="abrirVideo('images/miau.mp4')">Meu amor3.mp4</td>
                 </tr>
             </table>    
         `
@@ -198,22 +223,41 @@ function abrirDiretorio(type){
 function user(user){
     if (user === 'felipe'){
         const usrHtml = `
-        <div id="janela">
-        <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
             <table style="width:100%">
                 <tr onclick="abrirImagem('images/gay.png', 'velho')">
-                    <td>Declaração</td>
+                    <td>Declaração.png</td>
                 </tr>
                 <tr onclick="abrirImagem('images/guriaremaster.png', 'novo')">
-                    <td>Ela</td>
+                    <td>Ela.png</td>
                 </tr>
                 <tr onclick="abrirImagem('images/morte.png', 'velho')">
-                    <td>...</td>
+                    <td>Adeus.png</td>
                 </tr>
             </table>
-        </div>
         `
-        document.getElementById('janela').innerHTML = usrHtml
+        document.getElementById('main-arquivo').innerHTML = usrHtml
+    }
+    if(user === 'sayonara'){
+        const usrHtml = `
+            <table style="width:100%">
+                <tr onclick="abrirVideo('images/sayonara/funny.mp4')">
+                    <td>Funny.mp4</td>
+                </tr>
+                <tr onclick="abrirImagem('images/sayonara/wallpaperSayonara.png', 'novo')">
+                    <td>wallpaper.png</td>
+                </tr>
+                <tr onclick="abrirImagem('images/sayonara/myBeloved.png', 'novo')">
+                    <td>Meta.jpeg</td>
+                </tr>
+                <tr onclick="abrirImagem('images/sayonara/espada.png', 'novo')">
+                    <td>Espada-foda.png</td>
+                </tr>
+                <tr onclick="abrirImagem('images/sayonara/cabelo.png', 'novo')">
+                    <td>Cabelo.jpeg</td>
+                </tr>
+            </table>
+        `
+        document.getElementById('main-arquivo').innerHTML = usrHtml
     }
 
 }
