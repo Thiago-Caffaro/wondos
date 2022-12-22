@@ -143,20 +143,20 @@
   .topbar .navbar button:focus {
     background-color: #f2f2f2;
   }
-  .spotify-playlists {
+  #spotify-playlists {
     padding: 20px 40px;
   }
-  .spotify-playlists h2 {
+  #spotify-playlists h2 {
     color: #ffffff;
     font-size: 22px;
     margin-bottom: 20px;
   }
-  .spotify-playlists .list {
+  #spotify-playlists #list {
     display: flex;
     gap: 20px;
     overflow: hidden;
   }
-  .spotify-playlists .list .item {
+  #spotify-playlists #list .item {
     min-width: 140px;
     width: 160px;
     padding: 15px;
@@ -165,18 +165,18 @@
     cursor: pointer;
     transition: all ease 0.4s;
   }
-  .spotify-playlists .list .item:hover {
+  #spotify-playlists #list .item:hover {
     background-color: #252525;
   }
-  .spotify-playlists .list .item img {
+  #spotify-playlists #list .item img {
     width: 100%;
     border-radius: 6px;
     margin-bottom: 10px;
   }
-  .spotify-playlists .list .item .play {
+  #spotify-playlists #list .item .play {
     position: relative;
   }
-  .spotify-playlists .list .item .play .fa {
+  #spotify-playlists #list .item .play .fa {
     position: absolute;
     right: 10px;
     top: -60px;
@@ -186,11 +186,11 @@
     opacity: 0;
     transition: all ease 0.4s;
   }
-  .spotify-playlists .list .item:hover .play .fa {
+  #spotify-playlists #list .item:hover .play .fa {
     opacity: 1;
     transform: translateY(-20px);
   }
-  .spotify-playlists .list .item h4 {
+  #spotify-playlists #list .item h4 {
     color: #ffffff;
     font-size: 14px;
     margin-bottom: 10px;
@@ -198,14 +198,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .spotify-playlists .list .item p {
+  #spotify-playlists #list .item p {
     color: #989898;
     font-size: 12px;
     line-height: 20px;
     font-weight: 600;
   }
-  .spotify-playlists hr {
-    margin: 70px 0px 0px;
+  #spotify-playlists hr {
+    margin: 25px 0px 0px;
     border-color: #636363;
   }
   
@@ -242,11 +242,14 @@
     cursor: pointer;
   }
   #stopBnt{
-    margin-top: 50px;
+    margin-top: 20px;
     background-color: #292a29;
     border-radius: 10px;
     border: solid 2px rgb(69, 244, 75);
     color: white;
     cursor: pointer;
     padding: 10px;
+  }
+  .preguica{
+    font-size: 10px;
   }

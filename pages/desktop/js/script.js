@@ -74,6 +74,13 @@ function abrirPrograma(programa){
         `
         document.getElementById('janela').innerHTML = progHtml
     }
+    if (programa === 'cmd'){
+        const progHtml = `
+            <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div>
+            <iframe src="programas/cmd/index.html" style="height: 100%; width: 100%; border: 0;"></iframe>
+        `
+        document.getElementById('janela').innerHTML = progHtml
+    }
 }
 function abrirVideo(video){
     const videoHtml = `

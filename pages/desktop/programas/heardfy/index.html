@@ -1,6 +1,5 @@
 
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 <body>
     <div class="sidebar">
       <div class="logo">
@@ -13,31 +12,32 @@
           <li>
             <a href="#">
               <span class="fa fa-home"></span>
-              <span>Home</span>
+              <span>Início<br><span class="preguica">(Sem orçamento para adicionar!)</span></span>
             </a>
           </li>
           <li>
             <a href="#">
               <span class="fa fas fa-book"></span>
-              <span>Your Library</span>
+              <span>Sua Biblioteca<br><span class="preguica">(Sem orçamento para adicionar!)</span></span>
             </a>
           </li>
         </ul>
       </div>
+      <button id="stopBnt" onclick="tocarMusica('');">Parar musica atual</button>
 
       <div class="navigation">
         <ul>
           <li>
             <a href="#">
               <span class="fa fas fa-plus-square"></span>
-              <span>Create Playlist</span>
+              <span>Criar playlist<br><span class="preguica">(Sem orçamento para adicionar!)</span></span>
             </a>
           </li>
-
+          
           <li>
             <a href="#">
               <span class="fa fas fa-heart"></span>
-              <span>Liked Songs</span>
+              <span>Músicas Curtidas<br><span class="preguica">(Sem orçamento para adicionar!)</span></span>
             </a>
           </li>
         </ul>
@@ -63,64 +63,16 @@
         </div>
       </div>
 
-      <div class="spotify-playlists">
+      <div id="spotify-playlists">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <audio id="audioPlayer" autoplay></audio>
-        
         <h2>Suas Músicas</h2>
-        <div class="list">
-          <div class="item" onclick="tocarMusica('../../audio/bigshotestranho.mp3')">
-            <img src="../../images/icons/deltrun.png" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>The biggest shot</h4>
-            <p>Coby Jox</p>
-          </div>
-
-          <div class="item" onclick="tocarMusica('../../audio/bigshotfoda.mp3');">
-            <img src="../../images/icons/tiroJusto.png" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>The greatest shot</h4>
-            <p>Coby Jox</p>
-          </div>
-
-          <div class="item" onclick="tocarMusica('../../audio/cheiro_de_cabuloso.mp3');">
-            <img src="../../images/icons/deltrun.png" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>The biggest shot</h4>
-            <p>Coby Fox</p>
-          </div>
-
-          <div class="item" onclick="tocarMusica('../../audio/cheiro_de_sexo_putaria_entre_outros_afins.mp3');">
-            <img src="../../images/icons/deltrun.png" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>The biggest shot</h4>
-            <p>Coby Fox</p>
-          </div>
-
-          <div class="item" onclick="tocarMusica('../../audio/bigshotfoda.mp3');">
-            <img src="../../images/icons/deltrun.png" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>The biggest shot</h4>
-            <p>Coby Fox</p>
-          </div>
-        </div>
-        <button id="stopBnt" onclick="tocarMusica('');">Parar musica atual</button>
-
-        <hr>
       </div>
-
+    </div>
     <script
       src="https://kit.fontawesome.com/23cecef777.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
+
   </body>
