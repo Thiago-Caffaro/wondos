@@ -198,13 +198,13 @@ function abrirDiretorio(type){
                     <td onclick="user('felipe')">Felipe Oliveira</td>
                 </tr>
                 <tr>
-                    <td>Olavo Oliveira</td>
+                    <td onclick="user('sayonara')">Sayonara</td>
                 </tr>
                 <tr>
-                    <td>Carlonso Oliveira</td>
+                    <td onclick="user('himeno')">Himeno</td>
                 </tr>
                 <tr>
-                    <td>Heremita Oliveira</td>
+                    <td onclick="user('cristopher')">Cristopher</td>
                 </tr>
                 <tr>
                     <td>Bolongo Oliveira</td>
@@ -254,7 +254,16 @@ function user(user){
         `
         document.getElementById('main-arquivo').innerHTML = usrHtml
     }
-
+    if(user === 'cristopher'){
+        const usrHtml = `
+            <table style="width:100%">
+                <tr onclick="abrirImagem('images/Cristopher/Cristopher.png', 'novo')">
+                    <td>Lista-de-compras.png</td>
+                </tr>
+            </table>
+        `
+        document.getElementById('main-arquivo').innerHTML = usrHtml
+    }
 }
 function flip(){
     var element = document.getElementById("box__content");
