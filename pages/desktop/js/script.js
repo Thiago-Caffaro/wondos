@@ -87,7 +87,7 @@ function abrirVideo(video){
     <div class="box"  onclick="flip()">
             <div id="box__content">
             <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div><table>
-                <div class="box__front">
+                <div class="box__front" style="background-color: aliceblue;">
                     <video width="100%" height="600px" autoplay><source src=${video} type="video/mp4"></video>
                 </div>
                 <div class="box__back" style="background-color: aliceblue;"></div>   
@@ -279,7 +279,7 @@ function user(user){
                 <tr onclick="abrirImagem('images/sayonara/cabelo.png', 'novo')">
                     <td>Cabelo.jpeg</td>
                 </tr>
-                <tr onclick="abrirImagem('images/sayonara/folha.png', 'sayonara/folha2.png')">
+                <tr onclick="abrirImagem('images/sayonara/folha.png', 'sayonara/folha2')">
                     <td>Carta.png</td>
                 </tr>
             </table>
