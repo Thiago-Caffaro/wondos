@@ -7,7 +7,7 @@
     background-position: center center;
 }
 #desktop>#apps>button:hover{
-    background-color: rgba(240, 248, 255, 0.515);
+    background-color: rgba(74, 74, 74, 0.515);
     cursor: pointer;
 }
 .nameFolder{

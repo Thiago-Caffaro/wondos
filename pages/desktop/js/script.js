@@ -103,6 +103,8 @@ function abrirImagem(imagem, papel){
         src = "default.png"
     }else if (papel == 'novo'){
         src = "default2.png"
+    }else {
+        src = papel;
     }
     const imagemHtml = `
         <div class="box"  onclick="flip()">
@@ -148,8 +150,17 @@ function abrirDiretorio(type){
             <tr onclick="abrirAudio('ult.mp3')">
                 <td>Corra.mp3</td>
             </tr>
-            <tr onclick="abrirPasta('arquivo')">
+            <tr onclick="user('felipe')">
                 <td>Felipe Oliveira</td>
+            </tr>
+            <tr>
+                <td onclick="user('sayonara')">Sayonara</td>
+            </tr>
+            <tr>
+                <td onclick="user('himeno')">Himeno</td>
+            </tr>
+            <tr>
+                <td onclick="user('cristopher')">Cristopher</td>
             </tr>
         </table>
         `
@@ -214,7 +225,7 @@ function abrirDiretorio(type){
                     <td onclick="user('cristopher')">Cristopher</td>
                 </tr>
                 <tr>
-                    <td>Bolongo Oliveira</td>
+                    <td>Thiago Caffaro</td>
                 </tr>
             </table> 
         `
@@ -226,13 +237,13 @@ function user(user){
     if (user === 'felipe'){
         const usrHtml = `
             <table style="width:100%">
-                <tr onclick="abrirImagem('images/gay.png', 'velho')">
+                <tr onclick="abrirImagem('images/felipe/gay.png', 'velho')">
                     <td>Declaração.png</td>
                 </tr>
-                <tr onclick="abrirImagem('images/guriaremaster.png', 'novo')">
+                <tr onclick="abrirImagem('images/felipe/guriaremaster.png', 'novo')">
                     <td>Ela.png</td>
                 </tr>
-                <tr onclick="abrirImagem('images/morte.png', 'velho')">
+                <tr onclick="abrirImagem('images/felipe/morte.png', 'velho')">
                     <td>Adeus.png</td>
                 </tr>
             </table>
@@ -257,6 +268,9 @@ function user(user){
                 <tr onclick="abrirImagem('images/sayonara/cabelo.png', 'novo')">
                     <td>Cabelo.jpeg</td>
                 </tr>
+                <tr onclick="abrirImagem('images/sayonara/folha.png', 'sayonara/folha2.png')">
+                    <td>Carta.png</td>
+                </tr>
             </table>
         `
         document.getElementById('main-arquivo').innerHTML = usrHtml
@@ -266,6 +280,16 @@ function user(user){
             <table style="width:100%">
                 <tr onclick="abrirImagem('images/Cristopher/Cristopher.png', 'novo')">
                     <td>Lista-de-compras.png</td>
+                </tr>
+            </table>
+        `
+        document.getElementById('main-arquivo').innerHTML = usrHtml
+    }
+    if(user === 'himeno'){
+        const usrHtml = `
+            <table style="width:100%">
+                <tr onclick="abrirImagem('images/Himeno/Himeno.png', 'novo')">
+                    <td>Anotações.png</td>
                 </tr>
             </table>
         `
