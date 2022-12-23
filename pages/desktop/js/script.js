@@ -225,7 +225,7 @@ function abrirDiretorio(type){
                     <td onclick="user('cristopher')">Cristopher</td>
                 </tr>
                 <tr>
-                    <td>Thiago Caffaro</td>
+                    <td onclick="user('tago')">Thiago Caffaro</td>
                 </tr>
             </table> 
         `
@@ -290,6 +290,16 @@ function user(user){
             <table style="width:100%">
                 <tr onclick="abrirImagem('images/Himeno/Himeno.png', 'novo')">
                     <td>Anotações.png</td>
+                </tr>
+            </table>
+        `
+        document.getElementById('main-arquivo').innerHTML = usrHtml
+    }
+    if(user === 'tago'){
+        const usrHtml = `
+            <table style="width:100%">
+                <tr onclick="abrirImagem('images/dog.png', 'especial')">
+                    <td>:D</td>
                 </tr>
             </table>
         `
