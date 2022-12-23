@@ -6,6 +6,17 @@ diceRoll.addEventListener('click', function() {
   var roll = Math.floor(Math.random() * 6) + 1;
   alert('You rolled a ' + roll);
 }); */
+function apagar(type){
+    if (type == 1){
+        const novasRespostas = `<img src="imagem.png">`
+        document.getElementById('console').innerHTML = novasRespostas;
+    }else{
+        const novasRespostas = `<img src="imagem2.png">`
+        document.getElementById('console').innerHTML = novasRespostas;
+    }
+
+    
+}
 function receber(resposta, perguntaType){
     let perguntaText;
     let respondeu = false;
@@ -43,8 +54,8 @@ function receber(resposta, perguntaType){
         }
         if (respondeu == true){
             const novasRespostas = `
-                <button class="resposta" onclick="receber('a', 'irr')">&</button>
-                <button class="resposta" onclick="receber('b', 'irr')">‘</button>
+                <button class="resposta sinais" onclick="receber('a', 'irr')">&</button>
+                <button class="resposta sinais" onclick="receber('b', 'irr')">‘</button>
             `
             document.getElementById('respostas-box').innerHTML = novasRespostas;
             respondeu = false;
@@ -59,8 +70,8 @@ function receber(resposta, perguntaType){
         }
         if(respondeu == true){
             const novasRespostas = `
-                <button class="resposta" onclick="receber('a', 'rota')">&</button>
-                <button class="resposta" onclick="receber('b', 'rota')">‘</button>
+                <button class="resposta sinais" onclick="receber('a', 'rota')">&</button>
+                <button class="resposta sinais" onclick="receber('b', 'rota')">‘</button>
             `
             document.getElementById('respostas-box').innerHTML = novasRespostas;
             respondeu = false;
@@ -89,8 +100,8 @@ function receber(resposta, perguntaType){
             respondeu = true;
             if (respondeu == true){
                 const novasRespostas = `
-                    <button class="resposta" onclick="receber('a', 'rota2')">&</button>
-                    <button class="resposta" onclick="receber('b', 'rota2')">‘</button>
+                    <button class="resposta sinais" onclick="receber('a', 'rota2')">&</button>
+                    <button class="resposta sinais" onclick="receber('b', 'rota2')">‘</button>
                 `
                 document.getElementById('respostas-box').innerHTML = novasRespostas;
                 respondeu = false;
@@ -167,19 +178,21 @@ function receber(resposta, perguntaType){
         perguntaText = 'N.';
         document.getElementById('pergunta').innerText = perguntaText;
         const novasRespostas = `
-            <button class="resposta" onclick="alert('“I')">I</button>
-            <button class="resposta" onclick="alert('“I')">I</button>
+            <button class="resposta sinais" onclick="apagar(2)">I</button>
+            <button class="resposta sinais" onclick="apagar(2)">I</button>
         `
         document.getElementById('respostas-box').innerHTML = novasRespostas;
         respondeu = false;
         
     }
+    
     if (perguntaType == 'rota2'){
         var c = 0;
         if (resposta == 'a'){
+            
             perguntaText = "' N, S, “I, “I, “I";
             document.getElementById('pergunta').innerText = perguntaText;
-            const novasRespostas = `<button class="resposta" onclick="prompt('C K ! I (&/‘)')">Próximo</button>`
+            const novasRespostas = `<button class="resposta" onclick="apagar(1)">----</button>`
             document.getElementById('respostas-box').innerHTML = novasRespostas;
             respondeu = false;
         }

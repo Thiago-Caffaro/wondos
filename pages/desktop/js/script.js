@@ -88,7 +88,7 @@ function abrirVideo(video){
             <div id="box__content">
             <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div><table>
                 <div class="box__front">
-                    <video width="100%" autoplay><source src=${video} type="video/mp4"></video>
+                    <video width="100%" height="600px" autoplay><source src=${video} type="video/mp4"></video>
                 </div>
                 <div class="box__back" style="background-color: aliceblue;"></div>   
             </div>
@@ -104,9 +104,10 @@ function abrirImagem(imagem, papel){
     }else if (papel == 'novo'){
         src = "default2.png"
     }else {
-        src = papel;
+        src = `${papel}.png`;
     }
-    const imagemHtml = `
+    if(papel != 'spin' && papel != 'spin2'){
+        const imagemHtml = `
         <div class="box"  onclick="flip()">
             <div id="box__content">
             <div id="barra-janela-cima"><button onClick="fecharJanela()"><img src="images/icons/x_icon_172101.png"></button></div><table>
@@ -118,8 +119,24 @@ function abrirImagem(imagem, papel){
                 </div>
             </div>
         </div>
-    `
-    document.getElementById('placeHolderJanela').innerHTML = imagemHtml
+        `
+        document.getElementById('placeHolderJanela').innerHTML = imagemHtml
+    }else{
+        const imagemHtml = `
+        <div class="box">
+            <div id="box__content" class="spin" style="border: 0;">
+                <div class="box__front">
+                    <img src="${imagem}">
+                </div>
+                <div class="box__back">
+                    <img src="images/${src}">
+                </div>
+            </div>
+        </div>
+        `
+        document.getElementById('placeHolderJanela').innerHTML = imagemHtml
+    }
+    
 }
 function abrirAudio(audio){
     const audioHtml = `
@@ -149,18 +166,6 @@ function abrirDiretorio(type){
             </tr>
             <tr onclick="abrirAudio('ult.mp3')">
                 <td>Corra.mp3</td>
-            </tr>
-            <tr onclick="user('felipe')">
-                <td>Felipe Oliveira</td>
-            </tr>
-            <tr>
-                <td onclick="user('sayonara')">Sayonara</td>
-            </tr>
-            <tr>
-                <td onclick="user('himeno')">Himeno</td>
-            </tr>
-            <tr>
-                <td onclick="user('cristopher')">Cristopher</td>
             </tr>
         </table>
         `
@@ -203,7 +208,10 @@ function abrirDiretorio(type){
         const dirHtml = `
             <table style="width:100%">
                 <tr>
-                    <td>Lixeira vazia</td>
+                    <td onclick="abrirImagem('images/spin.png', 'spin')">Yoo, no fucking way</td>
+                </tr>
+                <tr>
+                    <td onclick="abrirImagem('images/spin2.png', 'spin2')">AHHHHHHHH</td>
                 </tr>
             </table> 
         `
@@ -223,6 +231,9 @@ function abrirDiretorio(type){
                 </tr>
                 <tr>
                     <td onclick="user('cristopher')">Cristopher</td>
+                </tr>
+                <tr>
+                    <td onclick="user('regina')">Regina</td>
                 </tr>
                 <tr>
                     <td onclick="user('tago')">Thiago Caffaro</td>
@@ -295,10 +306,38 @@ function user(user){
         `
         document.getElementById('main-arquivo').innerHTML = usrHtml
     }
+    if(user === 'regina'){
+        const usrHtml = `
+            <table style="width:100%">
+                <tr onclick="abrirImagem('images/Regina/roblox1.png', 'novo')">
+                    <td>printScreenCoblox1.png</td>
+                </tr>
+                <tr onclick="abrirImagem('images/Regina/roblox2.png', 'novo')">
+                    <td>printScreenCoblox2.png</td>
+                </tr>
+                <tr onclick="abrirImagem('images/Regina/roblox3.png', 'novo')">
+                    <td>printScreenCoblox3.png</td>
+                </tr>
+                <tr onclick="abrirImagem('images/Regina/roblox4.png', 'novo')">
+                    <td>printScreenCoblox4.png</td>
+                </tr>
+                <tr onclick="abrirVideo('images/Regina/cat.mp4')">
+                    <td>gatin.mp4</td>
+                </tr>
+                <tr onclick="abrirVideo('images/Regina/cats.mp4')">
+                    <td>hihihihi.mp4</td>
+                </tr>
+                <tr onclick="abrirVideo('images/Regina/gostosa.mp4')">
+                    <td>Minha-esposa.mp4</td>
+                </tr>
+            </table>
+        `
+        document.getElementById('main-arquivo').innerHTML = usrHtml
+    }
     if(user === 'tago'){
         const usrHtml = `
             <table style="width:100%">
-                <tr onclick="abrirImagem('images/dog.png', 'especial')">
+                <tr onclick="abrirImagem('images/frenteDog.png', 'trasDog')">
                     <td>:D</td>
                 </tr>
             </table>

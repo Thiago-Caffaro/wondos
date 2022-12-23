@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@font-face {
+    font-family:"Linguagemparanormal";
+    src: local("Linguagemparanormal"), url("pages/desktop/fonts/Linguagemparanormal-Regular.ttf");
+}
 
 *{
     margin: 0;
@@ -11,4 +15,17 @@ button{
 }
 ul{
     list-style: none;
+}
+.sinais{
+    font-family:"Linguagemparanormal";
+}
+@keyframes rotateAnimation {
+	from {transform: rotateY(45deg);}
+	to {transform: rotateY(225deg);}
+}
+.spin{
+    width: 200px;
+    height: 200px;
+	transform: rotateY(45deg);
+	animation: rotateAnimation 1s linear infinite;
 }
