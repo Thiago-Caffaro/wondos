@@ -271,7 +271,7 @@ function user(user){
                     <td>wallpaper.png</td>
                 </tr>
                 <tr onclick="abrirImagem('images/sayonara/myBeloved.png', 'novo')">
-                    <td>Meta.jpeg</td>
+                    <td>Pistola-Pika.jpeg</td>
                 </tr>
                 <tr onclick="abrirImagem('images/sayonara/espada.png', 'novo')">
                     <td>Espada-foda.png</td>
