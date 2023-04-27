@@ -13,7 +13,7 @@
         function send(){
             let user = document.forms["loginForm"]["fUser"].value;
             let password = document.forms["loginForm"]["fPassword"].value;
-            if(user == 'himeno' && password == 'scfrh005'){
+            if(user == 'admin' && password == 'admin'){
                 window.open("pages/desktop/desktop.html");
             }else{
                 alert("Dados incorretos!");
@@ -22,6 +22,7 @@
     </script>
     <div id="login">
         <form name="loginForm">
+            <p>Usuário: admin <br> Senha: admin</p>
             <label for="fname">Usuário</label><br>
             <input type="text" id="user" name="fUser"><br>
             <label for="lname">Senha</label><br>
